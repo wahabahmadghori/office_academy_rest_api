@@ -4,9 +4,9 @@ const { Faculty } = require('../models/faculty')
 const mongoose = require('mongoose')
 
 router.get('/', (req, res) => {
-    Faculty.find().then(Faculties => {
+    Faculty.find().then(faculties => {
         res.status(200).json({
-            Faculties: Faculties
+            faculties: faculties
         })
     }).catch(error => {
         res.status(400).json({
