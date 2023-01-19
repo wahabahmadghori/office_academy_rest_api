@@ -4,6 +4,8 @@ const { User } = require('../models/user')
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const verifyjwt = require('../middlewares/jwt')
+require('dotenv/config')
 
 router.get('/', (req, res) => {
     User.find().then(users => {
